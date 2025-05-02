@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-iris: #5d3fd3;
+  --color-thistle: #d8bfd8;
+  --color-periwinkle: #ccccff;
+  --color-taupe: #915f6d;
+
+  --color-Licorice: #28282b;
+  --color-Bizantium: #cbc3e3;
+  --color-matte: #28282b;
+  --color-Lavender: #e6e6fa;
+  --color-onyx: #353935;
+  --color-DarkPurple: #301934;
+  --color-mulberry: #770737;
+
+  --display-none: "hidden";
+}
