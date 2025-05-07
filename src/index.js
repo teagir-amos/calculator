@@ -153,6 +153,7 @@ function Clear(params) {
     clear.addEventListener("click", function () {
         document.getElementById("occurrence").innerHTML = "";
         document.getElementById("result").innerHTML = "";
+        document.getElementById("ScientificResults").innerHTML = "";
     });
 }
 
@@ -206,17 +207,6 @@ function Partititon() {
 
 Partititon();
 
-function propotion() {
-    const percent = document.querySelector("#percent");
-    percent.addEventListener("click", function () {
-        const percent = document.querySelector("#percent").innerHTML;
-        let displayInput = document.getElementById("occurrence").innerHTML += percent;
-        let displayClean = displayInput.replace(/\s+/g, '');
-        document.getElementById("occurrence").innerHTML = displayClean;
-    })
-}
-
-propotion();
 
 function clearDigit() {
     const clearone = document.querySelector("#lightmode");
@@ -243,15 +233,218 @@ function Calculate() {
     const results = document.querySelector("#result");
     const Occurrence = document.querySelector("#occurrence").innerHTML;
     equals.addEventListener("click", function () {
-        let displayInput = document.getElementById("occurrence").innerHTML; //getting the value of the occurrence display box.
-        console.log(displayInput)
+        let displayInput = document.getElementById("occurrence").innerHTML; //getting the value of the occurrence display box
         let valueEvaluate = eval(displayInput);//using eval to evaluate the expression.
-        console.log(valueEvaluate);
+        //console.log(valueEvaluate);
         document.getElementById("result").innerHTML = valueEvaluate; //displaying the result in the result display box.
-        document.getElementById("occurrence").innerHTML = displayInput; // showing the values being evaluated in the occurrence box
-
+        document.getElementById("occurrence").innerHTML = displayInput;// showing the values being evaluated in the occurrence box
     });
 }
 
 Calculate();
+
+function proportion() {
+    document.getElementById("percent").addEventListener("click", function () {
+        document.getElementById("percent").style.backgroundColor = "#770737";
+        document.getElementById("percent").style.color = "#fff";
+        document.getElementById("percent").style.fontWeight = "bold";
+
+        setTimeout(function () { //Onclick, change the background color to the desired color for two seconds.
+            document.getElementById("percent").style.backgroundColor = "";// Reset to default
+            document.getElementById("percent").style.color = "#915f6d";
+        }, 2000);
+
+        let displayInput = document.getElementById("occurrence").innerHTML;
+        let percentResults = (displayInput / 100);
+        console.log(percentResults);
+        document.getElementById("ScientificResults").innerHTML = percentResults;
+    });
+};
+
+proportion();
+
+
+function logCalc() {
+    const log = 10;
+    document.getElementById("logBtn").addEventListener("click", function () {
+        document.getElementById("logBtn").style.backgroundColor = "#770737";
+        document.getElementById("logBtn").style.color = "#fff";
+        document.getElementById("logBtn").style.fontWeight = "bold";
+
+        setTimeout(function () {
+            document.getElementById("logBtn").style.backgroundColor = "";
+            document.getElementById("logBtn").style.color = "#915f6d";
+        }, 2000);
+
+        let displayInput = document.getElementById("occurrence").innerHTML;
+        let logResults = (Math.log10(displayInput));
+        document.getElementById("ScientificResults").innerHTML = logResults;
+    })
+}
+
+logCalc()
+
+function lncalc() {
+    document.getElementById("lnBtn").addEventListener("click", function () {
+        document.getElementById("lnBtn").style.backgroundColor = "#770737";
+        document.getElementById("lnBtn").style.color = "#fff";
+        document.getElementById("lnBtn").style.fontWeight = "bold";
+
+        setTimeout(function () {
+            document.getElementById("lnBtn").style.backgroundColor = "";
+            document.getElementById("lnBtn").style.color = "#915f6d";
+        }, 2000);
+
+        let displayInput = document.getElementById("occurrence").innerHTML;
+        let lnResults = Math.log(displayInput);
+        console.log(lnResults);
+        document.getElementById("ScientificResults").innerHTML = lnResults;
+    })
+
+
+};
+
+lncalc();
+
+
+function factorial() {
+    document.getElementById("factorialBtn").addEventListener("click", function () {
+        document.getElementById("factorialBtn").style.backgroundColor = "#770737";
+        document.getElementById("factorialBtn").style.color = "#fff";
+        document.getElementById("factorialBtn").style.fontWeight = "bold";
+
+        setTimeout(function () {
+            document.getElementById("factorialBtn").style.backgroundColor = "";
+            document.getElementById("factorialBtn").style.color = "#915f6d";
+        }, 2000);
+
+        let displayInput = document.getElementById("occurrence").innerHTML;
+        let factorialResults = 1;
+        for (let i = 1; i <= displayInput; i++) {
+            factorialResults *= i;
+        }
+        console.log(factorialResults);
+        document.getElementById("ScientificResults").innerHTML = factorialResults;
+    });
+}
+
+factorial()
+
+function pie() {
+    const pie = 3.1415926535897;
+    document.getElementById("pieBtn").addEventListener("click", function () {
+        document.getElementById("pieBtn").style.backgroundColor = "#770737";
+        document.getElementById("pieBtn").style.color = "#fff";
+        document.getElementById("pieBtn").style.fontWeight = "bold";
+
+        setTimeout(function () {
+            document.getElementById("pieBtn").style.backgroundColor = "";
+            document.getElementById("pieBtn").style.color = "#915f6d";
+        }, 2000);
+
+        let displayInput = document.getElementById("occurrence").innerHTML;
+        let pieResults = (pie * displayInput);
+        console.log(pieResults);
+        document.getElementById("ScientificResults").innerHTML = pieResults;
+    });
+}
+
+pie()
+
+
+function exponent() {
+    const exp = 2.718281828459045;
+    document.getElementById("expoBtn").addEventListener("click", function () {
+        document.getElementById("expoBtn").style.backgroundColor = "#770737";
+        document.getElementById("expoBtn").style.color = "#fff";
+        document.getElementById("expoBtn").style.fontWeight = "bold";
+
+        setTimeout(function () {
+            document.getElementById("expoBtn").style.backgroundColor = "";
+            document.getElementById("expoBtn").style.color = "#915f6d";
+        }, 2000);
+
+        let displayInput = document.getElementById("occurrence").innerHTML;
+        let expResults = (exp * (displayInput));
+        console.log(expResults);
+        document.getElementById("ScientificResults").innerHTML = expResults;
+    });
+
+}
+
+exponent()
+
+function power() {
+    document.getElementById("powerBtn").addEventListener("click", function () {
+        document.getElementById("powerBtn").style.backgroundColor = "#770737";
+        document.getElementById("powerBtn").style.color = "#fff";
+        document.getElementById("powerBtn").style.fontWeight = "bold";
+
+        setTimeout(function () {
+            document.getElementById("powerBtn").style.backgroundColor = "";
+            document.getElementById("powerBtn").style.color = "#915f6d";
+        }, 2000);
+
+        let displayInput = document.getElementById("occurrence").innerHTML;
+        let powerResults = Math.pow(displayInput, 2);
+        console.log(powerResults);
+        document.getElementById("ScientificResults").innerHTML = powerResults;
+    });
+};
+
+power()
+
+function bracket() {
+    document.getElementById("bracketBtn").addEventListener("click", function () {
+        document.getElementById("bracketBtn").style.backgroundColor = "#770737";
+        document.getElementById("bracketBtn").style.color = "#fff";
+        document.getElementById("bracketBtn").style.fontWeight = "bold";
+
+        setTimeout(function () {
+            document.getElementById("bracketBtn").style.backgroundColor = "";
+            document.getElementById("bracketBtn").style.color = "#915f6d";
+        }, 2000);
+
+        let displayInput = document.getElementById("occurrence");
+        let displayInputValue = displayInput.innerHTML;
+        let bracketResults = ("(" + displayInputValue + ")");
+        console.log("Bracketed Expression:", bracketResults);
+        let result = Function(`return ${bracketResults}`)();
+        document.getElementById("ScientificResults").innerHTML = result;
+        document.getElementById("occurrence").innerHTML = bracketResults;
+    })
+};
+
+bracket()
+
+function root(value) {
+    document.getElementById("rootBtn").addEventListener("click", function () {
+        document.getElementById("rootBtn").style.backgroundColor = "#770737";
+        document.getElementById("rootBtn").style.color = "#fff";
+        document.getElementById("rootBtn").style.fontWeight = "bold";
+
+        setTimeout(function () {
+            document.getElementById("rootBtn").style.backgroundColor = "";
+            document.getElementById("rootBtn").style.color = "#915f6d";
+        }, 2000);
+
+        let displayroot = document.getElementById("occurrence").innerText;
+        let rootResults = Math.sqrt(displayroot)
+        console.log(rootResults)
+        document.getElementById("ScientificResults").innerText = rootResults;
+
+    });
+}
+
+root()
+
+
+
+
+
+
+
+
+
+
 

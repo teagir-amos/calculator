@@ -7,10 +7,10 @@
     <title>Calculator apk</title>
   </head>
   <body
-    class="bg-Lavender dark:bg-slate-100 flex justify-center items-center h-screen"
+    class="bg-Lavender dark:bg-slate-100 flex justify-center items-center h-screen flex-col "
   >
-    <div class="bg-white dark:bg-black rounded-lg h-200 w-100">
-      <div class="flex pt-8 justify-center items-center">
+    <div class="bg-white dark:bg-black rounded-lg h-200 w-100 z-10 container mx-auto">
+      <div class="flex pt-8 justify-center items-center ">
         <div class="flex rounded-lg p-2 gap-2 bg-Bizantium dark:bg-amber-400">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div
-        class="bg-slate-50 dark:bg-matte h-30 w-90 rounded-lg flex flex-col inset-shadow-sm inset-shadow-slate-500 m-5 mt-20"
+        class="bg-slate-50 dark:bg-matte h-40 w-90 rounded-lg flex flex-col inset-shadow-sm inset-shadow-slate-500 m-5 mt-10"
       >
         <display
           id="occurrence"
@@ -49,7 +49,12 @@
         <display
         id="result"
           class="flex justify-end items-end h-13 mt-2 text-3xl pr-1 text-iris dark:text-amber-400"
-          >00</display
+          >Basic Operations</display
+        >
+        <display
+        id="ScientificResults"
+          class="flex justify-end items-end h-13 mt-2 text-3xl pr-1  text-iris dark:text-amber-400"
+          >Advanced Calculations</display
         >
       </div>
       <div class="h-120 w-90 m-5 rounded-lg grid grid-cols-4 gap-5 pt-2 pb-2">
@@ -175,7 +180,7 @@
         </button>
         <button
         id="percent"
-          class="bg-slate-50 rounded-full shadow-xl/30 font-semibold hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:text-white"
+          class="bg-slate-50 rounded-full shadow-xl/30 font-semibold hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:text-amber-400"
         >
           %
         </button>
@@ -187,9 +192,42 @@
         </button>
         <button
         id="decimal"
-          class="bg-slate-50 rounded-full shadow-xl/30 font-semibold hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:text-white"
+          class="bg-slate-50 rounded-full shadow-xl/30 font-semibold hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:text-amber-400"
         >
           .
+        </button>
+        <button
+        id="lnBtn"
+         class="bg-slate-50 rounded-full shadow-xl/30 flex justify-center items-center hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:hover:text-amber-400">
+          ln
+        </button>
+        <button
+        id="logBtn" class="bg-slate-50 rounded-full shadow-xl/30 flex justify-center items-center hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:hover:text-amber-400">
+            log
+        </button>
+        <button
+        id="factorialBtn" class="bg-slate-50 rounded-full shadow-xl/30 flex justify-center items-center hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:hover:text-amber-400">
+          !
+        </button>
+        <button
+        id="pieBtn" class="bg-slate-50 rounded-full shadow-xl/30 flex justify-center items-center hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:hover:text-amber-400">
+          π
+        </button>
+        <button
+        id="expoBtn" class="bg-slate-50 rounded-full shadow-xl/30 flex justify-center items-center hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:hover:text-amber-400">
+          e
+        </button>
+        <button
+        id="powerBtn" class="bg-slate-50 rounded-full shadow-xl/30 flex justify-center items-center hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:hover:text-amber-400">
+          ^
+        </button>
+        <button
+        id="bracketBtn" class="bg-slate-50 rounded-full shadow-xl/30 flex justify-center items-center hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:hover:text-amber-400">
+          ()
+        </button>
+        <button
+        id="rootBtn" class="bg-slate-50 rounded-full shadow-xl/30 flex justify-center items-center hover:bg-periwinkle cursor-pointer dark:bg-onyx dark:hover:bg-DarkPurple dark:hover:text-amber-400">
+          √
         </button>
       </div>
     </div>
