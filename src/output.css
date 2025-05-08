@@ -230,6 +230,9 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
   .block {
     display: block;
   }
@@ -260,6 +263,9 @@
   }
   .h-fit {
     height: fit-content;
+  }
+  .h-full {
+    height: 100%;
   }
   .w-90 {
     width: calc(var(--spacing) * 90);
